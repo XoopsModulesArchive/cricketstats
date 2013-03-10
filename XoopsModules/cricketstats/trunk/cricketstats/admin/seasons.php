@@ -32,7 +32,7 @@ Cricket League Version & Modifications by M0nty <vaughan.montgomery@gmail.com>
 
 ************************************************************
 */
-
+include_once 'admin_header.php';
 include '../../../include/cp_header.php'; //Include file, which checks for permissions and sets navigation
 
 $cricket_seasonid = isset($_GET['season_id']) ? intval($_GET['season_id']) : 0;
@@ -49,27 +49,8 @@ $cricket_delete_submit = isset($_POST['delete_submit']) ? $_POST['delete_submit'
 
 xoops_cp_header();
 
-?>
-
-<!-- Navigation bar-->
-<table width="560" cellspacing="0" bordercolordark="white" bordercolorlight="black" style="border-collapse:collapse;">
-    <tr>
-        <td  align="center" style="padding: 3px;background-color: #E6E6FF; border:1px #000000 dotted;">
-            <a href="seasons.php"><?php echo _AM_CRICK_NAVSEASONS;?></a></td>
-        <td  align="center" style="padding: 3px;background-color: #E6E6FF; border:1px #000000 dotted;">
-            <a href="leagues.php"><?php echo _AM_CRICK_NAVLEAGUES;?></a></td>
-        <td  align="center" style="padding: 3px;background-color: #FFFFFF; border:1px #000000 dotted;">
-            <a href="opponents.php"><?php echo _AM_CRICK_NAVOPPONENTS;?></a></td>
-        <td  align="center" nowrap style="padding: 3px;background-color: #FFFFFF; border:1px #000000 dotted;">
-            <a href="leaguematches.php"><?php echo _AM_CRICK_NAVLEAGUEMATCHES;?></a></td>
-        <td  align="center" style="padding: 3px;background-color: #FFFFFF; border:1px #000000 dotted;">
-            <a href="../index.php" target="_blank"><?php echo _AM_CRICK_NAVLEAGUETABLE;?></a></td>
-    </tr>
-</table>
-<!-- End Navigation bar-->
-
-
-<?php
+$indexAdmin = new ModuleAdmin();
+echo $indexAdmin->addNavigation('seasons.php');
 if($cricket_add_submit)
 {
     $name = $xoopsDB->quoteString(trim($_POST['name']));

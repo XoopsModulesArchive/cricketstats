@@ -1,3 +1,6 @@
+README FIRST
+-----------------------
+
 TPLLeagueStats is a league stats software designed for football (soccer)
 team.
 ************************************************************
@@ -21,9 +24,9 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 ************************************************************
-Ported to xoops by 
+Ported to xoops by
 Mythrandir http://www.web-udvikling.dk
-and 
+and
 ralf57 http://www.madeinbanzi.it
 
 Cricket League Version & Modifications by M0nty <vaughan.montgomery@gmail.com>

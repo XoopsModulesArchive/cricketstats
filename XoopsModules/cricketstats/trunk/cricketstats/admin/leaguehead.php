@@ -32,7 +32,8 @@ Cricket League Version & Modifications by M0nty <vaughan.montgomery@gmail.com>
 
 ************************************************************
 */
-if(!session_is_registered('league_name') || !session_is_registered('league_id'))
+//if(!session_is_registered('league_name') || !session_is_registered('league_id'))
+if ( !isset( $_SESSION['league_name'] ) || !isset( $_SESSION['league_id'] ) )
 {
 	echo "<form method=\"post\" action=\"leaguematches.php\">";
 	echo '<b><?php echo _AM_CRICK_CHOLEAGUE;?></b>';

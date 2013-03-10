@@ -8,7 +8,7 @@ CREATE TABLE cricket_deductedpoints (
 	  KEY seasonid (seasonid),
 	  KEY leagueid (leagueid),
 	  KEY opponentid (teamid)
-	) TYPE=MyISAM;
+	) ENGINE=MyISAM;
 	
 CREATE TABLE cricket_leaguematches (
 	  LeagueMatchID int(10) unsigned NOT NULL auto_increment,
@@ -43,7 +43,7 @@ CREATE TABLE cricket_leaguematches (
 	  KEY LeagueMatchAwayLoserID (LeagueMatchAwayLoserID),
 	  KEY LeagueMatchHomeTieID (LeagueMatchHomeTieID),
 	  KEY LeagueMatchAwayTieID (LeagueMatchAwayTieID)
-	) TYPE=MyISAM;
+	) ENGINE=MyISAM;
 
 CREATE TABLE cricket_opponents (
 	  OpponentID smallint(4) unsigned NOT NULL auto_increment,
@@ -52,7 +52,7 @@ CREATE TABLE cricket_opponents (
 	  OpponentName varchar(128) NOT NULL default '',
 	  OpponentOwn tinyint(1) unsigned NOT NULL default '0',
 	  PRIMARY KEY  (OpponentID)
-	) TYPE=MyISAM;
+	) ENGINE=MyISAM;
 	
 CREATE TABLE cricket_seasonnames (
 	  SeasonID int(10) unsigned NOT NULL auto_increment,
@@ -61,10 +61,10 @@ CREATE TABLE cricket_seasonnames (
 	  SeasonLine varchar(32) NOT NULL default '1',
 	  SeasonDefault tinyint(1) unsigned NOT NULL default '0',
 	  PRIMARY KEY  (SeasonID)
-	) TYPE=MyISAM;
+	) ENGINE=MyISAM;
 	
 INSERT INTO cricket_seasonnames (SeasonID, SeasonName, SeasonPublish, SeasonLine)
-	VALUES ('1', '2005', '1', '1');
+	VALUES ('1', '2013', '1', '1');
 
 CREATE TABLE cricket_leaguenames (
 	  LeagueID int(10) unsigned NOT NULL auto_increment,
@@ -73,7 +73,7 @@ CREATE TABLE cricket_leaguenames (
 	  LeagueLine varchar(32) NOT NULL default '1',
 	  LeagueDefault tinyint(1) unsigned NOT NULL default '0',
 	  PRIMARY KEY  (LeagueID)
-	) TYPE=MyISAM;
+	) ENGINE=MyISAM;
 	
 INSERT INTO cricket_leaguenames (LeagueID, LeagueName, LeaguePublish, LeagueLine)
 	VALUES ('1', 'Premier', '1', '1');
