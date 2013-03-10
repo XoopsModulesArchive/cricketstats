@@ -1,0 +1,123 @@
+Cricketstats Module v 1.0 RC1
+01-Oct-2005
+------------------------------------
+
+INSTALLATION 
+************************************
+1. Unzip the folder "cricketstats" to yoursite/modules/  folder  on your server.
+2. Install the module as you usually do.
+3. Go to the modules admin and set the preferences from the module menu
+4. Now you are ready to go!!!
+
+LOGGING IN FOR THE FIRST TIME
+************************************
+-Make sure you have setup the season and league, teams are unique to each season and also unique to each league too.
+-You must first add at least two teams per League to the database to access leaguamatches-page.
+
+MENU AND SEASON SELECTOR
+************************************
+With menu you can navigate through admin area and with season/league selector 
+you can change season/league you want to edit.
+
+SEASON CONTROL
+************************************
+You can add as many seasons as you like, though seasons with 
+same name can not be added. Add new season simply by giving a 
+season name and clicking 'Add season'-button. New season name should 
+now appear on the right side of the page.
+
+It is best to use years as season names ie.  2004, 2005, 2006 and so on.
+But you can enter any name you want for the season.
+
+Modify season by clicking it first from the list and then do necessary changes.
+Seasons are automatically published. If you don't want to publish specific 
+season, then uncheck the checkbox. If season is published, it is visible 
+at the actual statistics.
+
+If you want to delete a season, you must first delete all matches from it.
+
+LEAGUE CONTROL
+************************************
+You can add as many leagues as you like, though leagues with 
+same name can not be added. Add new league simply by giving a 
+league name and clicking 'Add league'-button. New league name should 
+now appear on the right side of the page.
+
+Modify league by clicking it first from the list and then do necessary changes.
+Leagues are automatically published. If you don't want to publish specific 
+league, then uncheck the checkbox. If league is published, it is visible 
+at the actual statistics.
+
+If you want to delete a league, you must first delete all matches from it.
+
+leagues are NOT unique to each season, so all league names can be seen in any season.
+
+TEAM CONTROL
+*************************************
+Control teams same as seasons and leagues. There is a checkbox when you edit a team name.
+If checkbox is checked, it means that team is your team.
+
+Teams are unique to each season and league,
+you will only see the teams that are entered for the selected season & league.
+
+MAKE SURE that you select the correct league and season before submitting a new team!!
+
+
+ LEAGUE MATCH CONTROL
+*************************************
+
+Add matches:
+-choose a date (year is automatically chosen from the year name or season name
+so make sure the season is in format yyyy eg. 2005
+-select teams from the dropdown menus (add final scores). Finally click
+'Add matches'
+-max 15 matches can be added to certain date each time
+-NOTICE: there can't be duplication entry for a team for one date!!
+
+After selecting Teams matches, enter the amount of runs in the RH column (or RA for away team),
+the WH & WA columns are for wickets scored.  ie.. if you scored 145 for 10 you enter 10 in the corresponding column.
+the BP column is for Bonus Points, many leagues have different rules concerning bonus points,
+these can range from 1 point for reaching 75 runs, 3 points for reaching 100 runs etc.
+I thought it best and easier to just add the box for manual input of bonus points instead of trying to figure an automatic based method.
+
+
+Modify matches:
+-to choose all matches from certain date, click the date in the left
+-to choose single match, click home or away team
+
+Delete match:
+-click the home or away team in the left and choose 'delete'
+
+MINITABLE BLOCK
+**********************************
+TPLLeagueStats comes with a block
+showing the default season's/Leagues ranking + runs for and against.
+It can be activated via blocks administration.
+
+TIPS
+*********************************
+If you want to give your team name another color
+instead of the default one,
+name you team for example <font color="#red">Your team</font>.
+This is not comfortable if you want to edit your team's name later 'cause there is 
+an issue with it that i hope to solve soon.
+
+
+TO-DO List:
+
+1) make templatable!
+2) admin area improvements & tidy up.
+3) make printer friendly page for user front-side (would be easier once templates and smarty enabled)
+
+there maybe a few small issues i haven't found, but am not receiving any php errors or mysql errors.
+
+I have only tested with XOOPS 2.0.13.1.
+
+This module will likely not work with XOOPS 2.2 or higher as it stands at the moment..
+If anyone is interested in helping me to achieve the goals on the TODO list and make 2.2 compatible
+Your Help will be much apreciated!!
+
+
+(This module is based on XOOPS tplleaguestats module by mithrandir & Ralf57
+ But has been highly modified and improved somewhat to work for cricket teams instead
+ of Soccer Teams)
