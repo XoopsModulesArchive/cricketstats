@@ -68,7 +68,8 @@ if (!isset($_SESSION['defaulthomeid'])) {
 $cricket_defaulthomeid = intval($_SESSION['defaulthomeid']);
 $cricket_defaultawayid = intval($_SESSION['defaultawayid']);
 
-if(!session_is_registered('defaultseasonid') || !session_is_registered('defaultleagueid'))
+//if(!session_is_registered('defaultseasonid') || !session_is_registered('defaultleagueid'))
+    if ( !isset( $_SESSION['defaultseasonid'] ) || !isset( $_SESSION['defaultleagueid'] ))
 {
 	$_SESSION['defaultseasonid'] = $cricket_d_season_id;
 	$_SESSION['defaultleagueid'] = $cricket_d_league_id;
@@ -188,16 +189,20 @@ while($cricket_data = $xoopsDB->fetchArray($cricket_get_teams))
 <?php echo _LS_CRICK_AWAYTEAM;?>
 <select name="away_id">
 
-<?php
-mysql_data_seek($cricket_get_teams, 0);
-while($cricket_data = $xoopsDB->fetchArray($cricket_get_teams))
-{
-	if($cricket_data['id'] == $cricket_defaultawayid)
-		echo"<option value=\"$cricket_data[id]\" SELECTED>$cricket_data[name]</option>\n";
-	else
-		echo"<option value=\"$cricket_data[id]\">$cricket_data[name]</option>\n";
-}
-?>
+    <?php
+    if (mysql_num_rows($cricket_get_teams) >= 1) {
+        mysql_data_seek($cricket_get_teams, 0);
+
+        while ($cricket_data = $xoopsDB->fetchArray($cricket_get_teams)) {
+            if ($cricket_data['id'] == $cricket_defaultawayid
+            ) {
+                echo"<option value=\"$cricket_data[id]\" SELECTED>$cricket_data[name]</option>\n";
+            } else {
+                echo"<option value=\"$cricket_data[id]\">$cricket_data[name]</option>\n";
+            }
+        }
+    }
+    ?>
 </select> <input type="submit" class="button" value=">>" name="submit5">
 </td>
 </tr>

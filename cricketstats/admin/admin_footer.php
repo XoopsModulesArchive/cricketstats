@@ -18,15 +18,11 @@
  * @version    $Id $
  */
 
+echo "<div class='adminfooter'>\n"
+    ."  <div style='text-align: center;'>\n"
+    ."    <a href='http://www.xoops.org' rel='external'><img src='{$pathIcon32}/xoopsmicrobutton.gif' alt='XOOPS' title='XOOPS'></a>\n"
+    ."  </div>\n"
+    ."  " . _AM_MODULEADMIN_ADMIN_FOOTER . "\n"
+    ."</div>";
 
-require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/include/cp_header.php';
-include_once dirname(__FILE__) . '/admin_header.php';
-
-xoops_cp_header();
-
-	$indexAdmin = new ModuleAdmin();
-
-    echo $indexAdmin->addNavigation('index.php');
-    echo $indexAdmin->renderIndex();
-
-include "admin_footer.php";
+xoops_cp_footer();

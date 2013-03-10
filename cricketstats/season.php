@@ -59,7 +59,8 @@ $cricket_border_c = $xoopsModuleConfig['bordercolour'];
 $cricket_tb_width = $xoopsModuleConfig['tablewidth'];
 
 //Check if there are session variables registered
-if(!session_is_registered('defaultseasonid') || !session_is_registered('defaultleagueid'))
+//if(!session_is_registered('defaultseasonid') || !session_is_registered('defaultleagueid'))
+    if ( !isset( $_SESSION['defaultseasonid'] ) || !isset( $_SESSION['defaultleagueid'] ))
 {
 	$_SESSION['defaultseasonid'] = $cricket_d_season_id;
 	$_SESSION['defaultleagueid'] = $cricket_d_league_id;

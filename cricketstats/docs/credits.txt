@@ -1,0 +1,5 @@
+Credits
+===============
+
+Originally developed by M0nty, based on XOOPS tplleaguestats module by mithrandir & Ralf57,
+which was based on TPL League Stats 1.03 (www.tpl-design.com/tplleaguestats)

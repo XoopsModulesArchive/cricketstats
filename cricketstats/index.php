@@ -69,7 +69,8 @@ $ludata = $xoopsDB->fetchArray($updated_query);
 $last_update = date('d.m.Y @ H:i', $ludata['last_updated']);
 
 //If session variables are registered
-if(!session_is_registered('defaultseasonid') || !session_is_registered('defaultleagueid') || !session_is_registered('defaultshow') || !session_is_registered('defaulttable'))
+//if(!session_is_registered('defaultseasonid') || !session_is_registered('defaultleagueid') || !session_is_registered('defaultshow') || !session_is_registered('defaulttable'))
+    if ( !isset( $_SESSION['defaultseasonid'] ) || !isset( $_SESSION['defaultleagueid'] ) || !isset( $_SESSION['defaultshow'] ) || !isset( $_SESSION['defaulttable'] ))
 {
     $_SESSION['defaultseasonid'] = $cricket_d_season_id;
     $_SESSION['defaultleagueid'] = $cricket_d_league_id;
@@ -986,8 +987,10 @@ elseif($cricket_defaulttable == 4)
 		    switch($sort)
 		    {
 		        case 'pts':
+                    if (isset($points)){
 		        array_multisort($points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'd':
 		        array_multisort($diff, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
