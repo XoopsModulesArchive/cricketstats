@@ -391,7 +391,7 @@ $cricket_get_seasons = $xoopsDB->query("SELECT * FROM ".$xoopsDB->prefix("cricke
 	$i = 0;
 	while($cricket_data = $xoopsDB->fetchArray($maxhomewin))
 	{
-		if($i % 0)
+		if($i = 0)
 			$temp_color = $cricket_bg1;
 		else
 			$temp_color = $cricket_bg2;
@@ -461,7 +461,7 @@ $cricket_get_seasons = $xoopsDB->query("SELECT * FROM ".$xoopsDB->prefix("cricke
 	$i = 0;
 	while($cricket_data = $xoopsDB->fetchArray($maxawaywin))
 	{
-		if($i % 0)
+		if($i = 0)
 			$temp_color = $cricket_bg1;
 		else
 			$temp_color = $cricket_bg2;
@@ -533,7 +533,7 @@ $cricket_get_seasons = $xoopsDB->query("SELECT * FROM ".$xoopsDB->prefix("cricke
 	$i = 0;
 	while($cricket_data = $xoopsDB->fetchArray($maxruns))
 	{
-		if($i % 0)
+		if($i = 0)
 			$temp_color = $cricket_bg1;
 		else
 			$temp_color = $cricket_bg2;
