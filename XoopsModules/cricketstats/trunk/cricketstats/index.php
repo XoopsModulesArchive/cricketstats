@@ -993,100 +993,148 @@ elseif($cricket_defaulttable == 4)
                         break;
 		        
 		        case 'd':
+                    if (isset($diff)){
 		        array_multisort($diff, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'pld':
+                    if (isset($pld)){
 		        array_multisort($pld, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'tw':
+                    if (isset($wins)){
 		        array_multisort($wins, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC,  $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_ASC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses,$pld, SORT_DESC, SORT_NUMERIC, $team, $homedraws, $homeloses,$homewins, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'td':
+                    if (isset($draws)){
 		        array_multisort($draws, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homeloses, $awaywins, $homedraws, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'tl':
+                    if (isset($loses)){
 		        array_multisort($loses, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $awaywins, $awaydraws, $homeloses, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                }
+                    break;
 		        
 		        case 'tf':
+                    if (isset($runs_for)){
 		        array_multisort($runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'ta':
+                    if (isset($runs_against)){
 		        array_multisort($runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'wf':
+                    if (isset($wickets_for)){
 		        array_multisort($wickets_for, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'wa':
+                    if (isset($wickets_against)){
 		        array_multisort($wickets_against, SORT_ASC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_ASC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 
 		        case 'hw':
+                    if (isset($homewins)){
 		        array_multisort($homewins, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC,  $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses,$pld, SORT_DESC, SORT_NUMERIC, $team, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'hd':
+                    if (isset($homedraws)){
 		        array_multisort($homedraws, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'hl':
+                    if (isset($homeloses)){
 		        array_multisort($homeloses, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'hf':
+                    if (isset($homeruns)){
 		        array_multisort($homeruns, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'ha':
+                    if (isset($homerunsagainst)){
 		        array_multisort($homerunsagainst, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'whf':
+                    if (isset($homewickets)){
 		        array_multisort($homewickets, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_ASC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'wha':
+                    if (isset($homewicketsagainst)){
 		        array_multisort($homewicketsagainst, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_ASC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 
 		        case 'aw':
+                    if (isset($awaywins)){
 		        array_multisort($awaywins, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'ad':
+                    if (isset($awaydraws)){
 		        array_multisort($awaydraws, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'al':
+                    if (isset($awayloses)){
 		        array_multisort($awayloses, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'af':
+                    if (isset($awayruns)){
 		        array_multisort($awayruns, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'aa':
+                    if (isset($awayrunsagainst)){
 		        array_multisort($awayrunsagainst, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'waf':
+                    if (isset($awaywickets)){
 		        array_multisort($awaywickets, SORT_DESC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		        
 		        case 'waa':
+                    if (isset($awaywicketsagainst)){
 		        array_multisort($awaywicketsagainst, SORT_ASC, SORT_NUMERIC, $points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 
 		        default:
+                    if (isset($points)){
 		        array_multisort($points, SORT_DESC, SORT_NUMERIC, $diff, SORT_DESC, SORT_NUMERIC, $runs_for, SORT_DESC, SORT_NUMERIC, $wickets_for, SORT_DESC, SORT_NUMERIC, $wins, SORT_DESC, SORT_NUMERIC, $runs_against, SORT_ASC, SORT_NUMERIC, $wickets_against, SORT_ASC, SORT_NUMERIC, $draws, $loses, $pld, SORT_DESC, SORT_NUMERIC, $team, $homewins, $homedraws, $homeloses, $awaywins, $awaydraws, $awayloses, $homeruns, $homerunsagainst, $awayruns, $awayrunsagainst, $homewickets, $homewicketsagainst, $awaywickets, $awaywicketsagainst);
-		        break;
+                    }
+                        break;
 		    }
 		    
 		    if($cricket_defaulttable == 1 || $cricket_defaulttable == 3)
